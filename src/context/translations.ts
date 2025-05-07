@@ -18,7 +18,8 @@ const translations = {
     },
     about: {
       about: "SOBRE MÍ",
-      download: "Descargar CV"
+      download: "Descargar CV",
+      description: "Soy Iván Terol, un apasionado desarrollador frontend con interés en la ciberseguridad y las aplicaciones modernas. Me encanta construir experiencias digitales limpias, funcionales y con un enfoque fuerte en la estética. Utilizo HTML, CSS, JavaScript, React, NextJS o Tailwind entre otras tecnologías.",
     },
     contact: {
       contact: "CONTACTO",
@@ -47,7 +48,8 @@ const translations = {
     },
     about: {
       about: "ABOUT ME",
-      download: "Download CV"
+      download: "Download CV",
+      description: "I'm Iván Terol, a passionate front-end developer with an interest in cybersecurity and modern applications. I love building clean, functional digital experiences with a strong focus on aesthetics. I use HTML, CSS, JavaScript, React, NextJS, and Tailwind, among other technologies."
     },
     contact: {
       contact: "CONTACT",
