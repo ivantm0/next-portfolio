@@ -3,7 +3,7 @@
 // import { useEffect, useState } from "react";
 // import { LuSun, LuMoon } from "react-icons/lu";
 import { useLanguage } from "@/context/LanguageContext";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
+import "flag-icons/css/flag-icons.min.css";
 
 interface Props {
   menu: boolean;
