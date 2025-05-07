@@ -12,19 +12,14 @@ const About = () => {
 
   if (menu) return null;
   return (
-    <div className="lg:absolute flex top-0 gap-10 right-0 justify-between -z-10">
+    <div className=" flex gap-10 top-0 right-0 justify-between">
       <div
-        className="text-white w-full flex flex-col justify-center xl:pl-50 py-8 px-4 md:px-10 xl:px-0 md:pt-32"
+        className="text-white w-full md:w-[500px] xl:w-[800px] flex flex-col justify-center xl:ml-50 my-8 mx-4 md:mx-10 xl:mx-0"
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
         <h1 className="text-5xl mb-4 font-bold">{t.about.about}</h1>
         <div className="w-full h-px bg-white/30 mb-6"></div>
-        <p className="text-xl w-full xl:w-[80%]">
-          Soy Iván Terol, un apasionado desarrollador frontend con interés en la
-          ciberseguridad y las aplicaciones modernas. Me encanta construir
-          experiencias digitales limpias, funcionales y con un enfoque fuerte en
-          la estética.
-        </p>
+        <p className="text-xl w-full xl:w-full">{t.about.description}</p>
         <a
           href="/CV_Ivan-Terol-Martinez.pdf"
           download
@@ -43,7 +38,7 @@ const About = () => {
         alt="Foto Iván Terol"
         width={550}
         height={1000}
-        className="rounded-bl-4xl hidden lg:block"
+        className="rounded-bl-4xl hidden lg:block lg:absolute top-0 right-0 -z-10"
       ></Image>
     </div>
   );
