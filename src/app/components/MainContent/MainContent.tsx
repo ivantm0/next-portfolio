@@ -50,11 +50,10 @@ const MainContent = ({ setActiveSection }: Props) => {
       style={{ fontFamily: "var(--font-geist-mono)" }}
       aria-hidden={menu}
     >
-      <div className="flex flex-col items-center max-w-3xl gap-6">
-        <h1 className="text-5xl font-bold uppercase leading-snug">
+      <div className="flex flex-col items-center max-w-[1200px] gap-6">
+        <h1 className="text-3xl md:text-7xl font-bold uppercase leading-snug">
           {t.home.greeting}
         </h1>
-        <h2 className="text-4xl uppercase">{t.home.subGreeting}</h2>
 
         <div className="text-2xl mt-4">
           <span ref={typedRef} className="multiple-text" />
@@ -62,9 +61,9 @@ const MainContent = ({ setActiveSection }: Props) => {
 
         <div className="flex flex-col sm:flex-row gap-6 mt-10 text-lg">
           <button
-            onClick={() => handleClick("about")}
+            onClick={() => handleClick("projects")}
             className="flex group flex-col items-center cursor-pointer overflow-hidden gap-2"
-            aria-label="Ir a sobre mí"
+            aria-label="Ir a proyectos"
           >
             <span className="flex items-center gap-2">
               <FaArrowRightLong />

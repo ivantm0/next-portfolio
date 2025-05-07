@@ -7,8 +7,7 @@ const translations = {
       contact: "CONTACTO",
     },
     home: 
-      {greeting: "Hola, soy Iván Terol",
-      subGreeting: "pero tú puedes llamarme",
+      {greeting: "¡Hola! Me llamo Iván Terol, y soy...",
       typedStrings: [
         "Desarrollador web frontend",
         "Analista en ciberseguridad",
@@ -34,8 +33,7 @@ const translations = {
       about: "ABOUT ME",
       contact: "CONTACT",
     },
-    home: {greeting: "Hi, I'm Iván Terol",
-      subGreeting: "but you can call me",
+    home: {greeting: "Hello! My name is Iván Terol, and I'm...",
       typedStrings: [
         "Frontend web developer",
         "Cybersecurity analyst",
