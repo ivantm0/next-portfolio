@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const VideoBackground = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
-  useEffect(() => {
-    const matchDark = window.matchMedia("(prefers-color-scheme: dark)");
+  // useEffect(() => {
+  //   const matchDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-    setIsDarkMode(matchDark.matches);
+  //   setIsDarkMode(matchDark.matches);
 
-    const listener = (e: MediaQueryListEvent) => {
-      setIsDarkMode(e.matches);
-    };
+  //   const listener = (e: MediaQueryListEvent) => {
+  //     setIsDarkMode(e.matches);
+  //   };
 
-    matchDark.addEventListener("change", listener);
+  //   matchDark.addEventListener("change", listener);
 
-    return () => {
-      matchDark.removeEventListener("change", listener);
-    };
-  }, []);
+  //   return () => {
+  //     matchDark.removeEventListener("change", listener);
+  //   };
+  // }, []);
   return (
     <>
       <video
@@ -31,10 +31,9 @@ const VideoBackground = () => {
         Tu navegador no soporta la reproducción de video.
       </video>
 
+      {/* Futuro tema claro ${isDarkMode ? "bg-gray-900 opacity-80" : "bg-gray-500 opacity-80" */}
       <div
-        className={`absolute top-0 left-0 h-screen w-screen overflow-hidden object-cover -z-50 ${
-          isDarkMode ? "bg-gray-900 opacity-80" : "bg-gray-300 opacity-50"
-        }`}
+        className={`absolute top-0 left-0 h-screen w-screen overflow-hidden object-cover -z-50 bg-gray-900 opacity-80`}
       ></div>
     </>
   );

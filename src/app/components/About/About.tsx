@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className=" flex gap-10 top-0 right-0 justify-between">
       <div
-        className="text-white w-full md:w-[500px] xl:w-[800px] flex flex-col justify-center xl:ml-50 my-8 mx-4 md:mx-10 xl:mx-0"
+        className="text-white w-full md:max-w-[600px] xl:max-w-[500px] flex flex-col justify-center xl:ml-50 my-8 mx-4 md:mx-10 xl:mx-0"
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
         <h1 className="text-5xl mb-4 font-bold">{t.about.about}</h1>
