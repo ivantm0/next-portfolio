@@ -11,7 +11,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
 
   return (
-    <div className="h-screen relative">
+    <div className="h-[100dvh] relative">
       <LayerMenu setActiveSection={setActiveSection} />
       {activeSection === "home" && (
         <MainContent setActiveSection={setActiveSection} />
