@@ -8,6 +8,7 @@ import { TfiWorld } from "react-icons/tfi";
 import { useMenu } from "@/context/MenuContext";
 import { FaArrowRight } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion } from "framer-motion";
 
 // Hook para detectar si la pantalla es móvil
 const useIsMobile = () => {
@@ -21,6 +22,26 @@ const useIsMobile = () => {
   }, []);
 
   return isMobile;
+};
+
+// Animación para la imagen
+const imageVariants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+// Animación para los items de la lista
+const listItemVariants = {
+  hidden: { opacity: 0, y: -40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
+  }),
 };
 
 const List = () => {
@@ -39,7 +60,6 @@ const List = () => {
 
   if (menu) return null;
 
-  //VISTA DETALLE SOLO EN MÓVIL
   if (isMobile && showDetails && currentProject) {
     return (
       <div
@@ -88,12 +108,16 @@ const List = () => {
     );
   }
 
-  //VISTA PRINCIPAL (desktop + lista móvil)
   return (
     <div className="absolute flex gap-14 w-full bottom-0 h-4/5 sm:h-3/4 overflow-hidden sm:flex-row flex-col">
-      {/* Imagen solo en sm+ */}
+      {/* Imagen con animación independiente */}
       {!isMobile && (
-        <div className="relative group w-[50%] transition-all duration-500 ease-in-out transform rounded-tr-4xl overflow-hidden">
+        <motion.div
+          className="relative group w-[50%] rounded-tr-4xl overflow-hidden"
+          initial="hidden"
+          animate="visible"
+          variants={imageVariants}
+        >
           {currentProject &&
             (currentProject.githubUrl || currentProject.webUrl) && (
               <div className="absolute hidden z-10 top-0 left-0 w-full h-full bg-black/70 rounded-tr-4xl group-hover:flex items-center justify-center gap-6 transition-colors duration-1000">
@@ -123,27 +147,37 @@ const List = () => {
             fill
             className="rounded-tr-4xl object-cover"
           />
-        </div>
+        </motion.div>
       )}
 
-      {/* Lista */}
+      {/* Lista con animación separada */}
       <div
         className={`flex w-full sm:w-[35%] flex-col ${
           menu ? "overflow-hidden" : "overflow-auto"
         } hide-scrollbar px-6`}
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
-        <h1 className="uppercase tracking-widest text-2xl sm:text-4xl pb-2 border-b-2 border-white">
+        <motion.h1
+          className="uppercase tracking-widest text-2xl sm:text-4xl pb-2 border-b-2 border-white"
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          custom={0}
+        >
           Proyectos
-        </h1>
+        </motion.h1>
 
         <ul className="text-base md:text-xl lg:text-3xl">
           {ListData.map((proyecto, index) => (
-            <li
+            <motion.li
               key={index}
               className="border-b-2 flex items-center gap-2 border-white hover:px-10 transition-all duration-500 ease-in-out"
               onMouseEnter={() => setHoverImage(proyecto.imageUrl)}
               onMouseLeave={() => setHoverImage(null)}
+              initial="hidden"
+              animate="visible"
+              variants={listItemVariants}
+              custom={index + 1}
             >
               {selectedProject === proyecto.name[language] && (
                 <FaArrowRight className="ml-10 text-base sm:text-xl" />
@@ -158,7 +192,7 @@ const List = () => {
               >
                 {proyecto.name[language]}
               </button>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
