@@ -65,7 +65,7 @@ const About = () => {
           className="flex gap-10 top-0 right-0 justify-between"
         >
           <motion.div
-            className="text-white w-full md:max-w-[600px] xl:max-w-[45%] flex flex-col justify-center xl:ml-40 my-8 mx-4 md:mx-10 xl:mx-0"
+            className="text-white w-full max-w-[90%] xl:max-w-[45%] flex flex-col justify-center xl:ml-30 my-8 mx-4 md:mx-10 xl:mx-0"
             style={{ fontFamily: "var(--font-geist-mono)" }}
             variants={containerVariants}
           >
@@ -104,7 +104,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            className="hidden lg:block lg:absolute top-0 right-0 -z-10"
+            className="hidden xl:block lg:absolute top-0 right-0 -z-10"
             initial="hidden"
             animate="visible"
             exit="exit"
