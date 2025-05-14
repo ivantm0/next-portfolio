@@ -70,7 +70,7 @@ const About = () => {
             variants={containerVariants}
           >
             <motion.h1
-              className="text-5xl mb-4 font-bold"
+              className="text-3xl sm:text-5xl mb-4 font-bold"
               variants={itemVariants}
             >
               {t.about.about}

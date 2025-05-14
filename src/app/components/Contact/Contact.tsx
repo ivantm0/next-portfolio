@@ -55,7 +55,7 @@ const Contact = () => {
             variants={containerVariants}
           >
             <motion.h1
-              className="text-5xl font-bold mb-4 tracking-wide"
+              className="text-3xl sm:text-5xl font-bold mb-4 tracking-wide"
               variants={itemVariants}
             >
               {t.contact.contact}
