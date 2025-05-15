@@ -12,9 +12,25 @@ export const ListData = [
       imageUrl: "/projects-cover/0-acciona-atlas.png",
       githubUrl: null,
       webUrl: "https://acciona-web-sostenibilidad.vercel.app",
+      technology: "nextjs tailwind ts"
     },
     {
       index: 1,
+      name: {
+        es: "Página web banco",
+        en: "Bank web",
+      },
+      description: {
+        es: "Web hecha en Innusual para Acciona.",
+        en: "Website made in Innusual for Acciona.",
+      },
+      imageUrl: "/projects-cover/13-web-bank.png",
+      githubUrl: "https://github.com/ivantm0/landing-bank-nextjs",
+      webUrl: "https://nextjs-bank.netlify.app/",
+      technology: "nextjs tailwind ts"
+    },
+    {
+      index: 2,
       name: {
         es: "Buscador de países",
         en: "Country Finder",
@@ -26,9 +42,10 @@ export const ListData = [
       imageUrl: "/projects-cover/1-buscador-paises.png",
       githubUrl: "https://github.com/ivantm0/buscar-paises.git",
       webUrl: "https://buscador-de-paises-js.netlify.app/",
+      technology: "html css js"
     },
     {
-      index: 2,
+      index: 3,
       name: {
         es: "Página web espacio",
         en: "Space web page",
@@ -39,10 +56,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/2-landing-space.png",
       githubUrl: "https://github.com/ivantm0/web-espacio.git",
-      webUrl: "https://web-espacio.netlify.app/"
+      webUrl: "https://web-espacio.netlify.app/",
+      technology: "html css js"
     },
     {
-      index: 3,
+      index: 4,
       name: {
         es: "Theoric builder",
         en: "Theoric builder",
@@ -53,10 +71,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/3-theoric-builder.png",
       githubUrl: "https://github.com/ivantm0/TheoricBuilder.git",
-      webUrl: null
+      webUrl: null,
+      technology: "java"
     },
     {
-      index: 4,
+      index: 5,
       name: {
         es: "Pokédex",
         en: "Pokedex",
@@ -67,10 +86,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/4-pokedex.png",
       githubUrl: "https://github.com/ivantm0/pokedex-react-vite.git",
-      webUrl: "https://pokedex-react-ivan.netlify.app/"
+      webUrl: "https://pokedex-react-ivan.netlify.app/",
+      technology: "react css ts"
     },
     {
-      index: 5,
+      index: 6,
       name: {
         es: "Launcher Universae",
         en: "Launcher Universae",
@@ -81,10 +101,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/5-launcher.png",
       githubUrl: "https://github.com/ivantm0/launcher-universae.git",
-      webUrl: null
+      webUrl: null,
+      technology: "java"
     },
     {
-      index: 6,
+      index: 7,
       name: {
         es: "Sunnyside web",
         en: "Sunnyside web",
@@ -95,10 +116,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/6-landing.jpg",
       githubUrl: "https://github.com/ivantm0/pagina-web-html-css-frontend-mentor.git",
-      webUrl: "https://pagina-web-html-css-frontend-mentor.netlify.app/"
+      webUrl: "https://pagina-web-html-css-frontend-mentor.netlify.app/",
+      technology: "html css js"
     },
     {
-      index: 7,
+      index: 8,
       name: {
         es: "W. web",
         en: "W. web",
@@ -109,10 +131,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/7-landing2.png",
       githubUrl: "https://github.com/ivantm0/frontend-mentor-react.git",
-      webUrl: "https://frontend-mentor-react-web.netlify.app/"
+      webUrl: "https://frontend-mentor-react-web.netlify.app/",
+      technology: "react tailwind ts"
     },
     {
-      index: 8,
+      index: 9,
       name: {
         es: "Piedra, papel, tijera",
         en: "Rock, paper, scissors",
@@ -123,10 +146,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/8-piedra.png",
       githubUrl: "https://github.com/ivantm0/piedra-papel-tijera.git",
-      webUrl: "https://piedra-papel-tijera-js.netlify.app/"
+      webUrl: "https://piedra-papel-tijera-js.netlify.app/",
+      technology: "html css js"
     },
     {
-      index: 9,
+      index: 10,
       name: {
         es: "Consultar tiempo",
         en: "Check time",
@@ -137,10 +161,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/9-tiempo.png",
       githubUrl: "https://github.com/ivantm0/app-clima.git",
-      webUrl: "https://app-consulta-tiempo-js.netlify.app/"
+      webUrl: "https://app-consulta-tiempo-js.netlify.app/",
+      technology: "html css js"
     },
     {
-      index: 10,
+      index: 11,
       name: {
         es: "Ahorcado",
         en: "Hangman",
@@ -151,10 +176,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/10-ahorcado.png",
       githubUrl: "https://github.com/ivantm0/ahorcado.git",
-      webUrl: "https://ahorcado-html-css-js.netlify.app"
+      webUrl: "https://ahorcado-html-css-js.netlify.app",
+      technology: "html css js"
     },
     {
-      index: 11,
+      index: 12,
       name: {
         es: "IP Tracker",
         en: "IP Tracker",
@@ -165,10 +191,11 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/11-iptracker.png",
       githubUrl: "https://github.com/ivantm0/ip-tracker.git",
-      webUrl: "https://ip-tracker-api.netlify.app"
+      webUrl: "https://ip-tracker-api.netlify.app",
+      technology: "html css js"
     },
     {
-      index: 12,
+      index: 13,
       name: {
         es: "EasyBank web",
         en: "EasyBank web",
@@ -179,7 +206,8 @@ export const ListData = [
       },
       imageUrl: "/projects-cover/12-landing-page.png",
       githubUrl: "https://github.com/ivantm0/landing-page.git",
-      webUrl: "https://landing-page-bank-frontend-mentor.netlify.app/"
+      webUrl: "https://landing-page-bank-frontend-mentor.netlify.app/",
+      technology: "html css js"
     }
   ];
 
