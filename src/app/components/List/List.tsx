@@ -150,7 +150,7 @@ const List = () => {
   }
 
   return (
-    <div className="absolute flex gap-14 w-full bottom-0 h-4/5 sm:h-3/4 overflow-hidden sm:flex-row flex-col">
+    <div className="absolute flex gap-14 w-full bottom-0 h-4/5 sm:h-3/4 overflow-y-auto sm:flex-row flex-col hide-scrollbar">
       {/* Imagen */}
       {!isMobile && (
         <motion.div
@@ -193,7 +193,7 @@ const List = () => {
 
       {/* Lista */}
       <div
-        className={`flex w-full md:w-[35%] flex-col  px-6`}
+        className={`flex w-full md:w-[35%] flex-col px-6`}
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
         {/* Filtros */}
