@@ -193,9 +193,7 @@ const List = () => {
 
       {/* Lista */}
       <div
-        className={`flex w-full md:w-[35%] flex-col ${
-          menu ? "overflow-hidden" : "overflow-auto"
-        } hide-scrollbar px-6`}
+        className={`flex w-full md:w-[35%] flex-col  px-6`}
         style={{ fontFamily: "var(--font-geist-mono)" }}
       >
         {/* Filtros */}
@@ -215,55 +213,60 @@ const List = () => {
             </button>
           ))}
         </div>
-
-        <motion.h1
-          className="uppercase tracking-widest text-2xl sm:text-4xl pb-2 border-b-2 border-white"
-          initial="hidden"
-          animate="visible"
-          variants={listItemVariants}
-          custom={0}
+        <div
+          className={`flex w-full flex-col ${
+            menu ? "overflow-hidden" : "overflow-auto"
+          } hide-scrollbar`}
         >
-          {t.projects.projects}
-        </motion.h1>
+          <motion.h1
+            className="uppercase tracking-widest text-2xl sm:text-4xl pb-2 border-b-2 border-white"
+            initial="hidden"
+            animate="visible"
+            variants={listItemVariants}
+            custom={0}
+          >
+            {t.projects.projects}
+          </motion.h1>
 
-        <ul className="text-base md:text-xl lg:text-3xl">
-          {filteredData.map((proyecto, index) => (
-            <motion.li
-              key={index}
-              className="border-b-2 flex items-center justify-between border-white hover:px-6 transition-all duration-500 ease-in-out"
-              onMouseEnter={() => setHoverImage(proyecto.imageUrl)}
-              onMouseLeave={() => setHoverImage(null)}
-              initial="hidden"
-              animate="visible"
-              variants={listItemVariants}
-              custom={index + 1}
-            >
-              <div className="flex items-center gap-2">
-                {selectedProject === proyecto.name[language] && (
-                  <FaArrowRight className="ml-2 text-base sm:text-xl" />
-                )}
-                <button
-                  className="cursor-pointer my-4 tracking-widest text-left"
-                  onClick={() => {
-                    setProjectImage(proyecto.imageUrl);
-                    setSelectedProject(proyecto.name[language]);
-                    if (isMobile) setShowDetails(true);
-                  }}
-                >
-                  {proyecto.name[language]}
-                </button>
-              </div>
-              {/* Tecnologías */}
-              <div className="flex gap-2 pr-2 text-xl">
-                {proyecto.technology.split(" ").map((tech, idx) => (
-                  <span key={idx} title={tech}>
-                    {techIcons[tech.toLowerCase()] || tech}
-                  </span>
-                ))}
-              </div>
-            </motion.li>
-          ))}
-        </ul>
+          <ul className="text-base md:text-xl lg:text-3xl">
+            {filteredData.map((proyecto, index) => (
+              <motion.li
+                key={index}
+                className="border-b-2 flex items-center justify-between border-white hover:px-6 transition-all duration-500 ease-in-out"
+                onMouseEnter={() => setHoverImage(proyecto.imageUrl)}
+                onMouseLeave={() => setHoverImage(null)}
+                initial="hidden"
+                animate="visible"
+                variants={listItemVariants}
+                custom={index + 1}
+              >
+                <div className="flex items-center gap-2">
+                  {selectedProject === proyecto.name[language] && (
+                    <FaArrowRight className="ml-2 text-base sm:text-xl" />
+                  )}
+                  <button
+                    className="cursor-pointer my-4 tracking-widest text-left"
+                    onClick={() => {
+                      setProjectImage(proyecto.imageUrl);
+                      setSelectedProject(proyecto.name[language]);
+                      if (isMobile) setShowDetails(true);
+                    }}
+                  >
+                    {proyecto.name[language]}
+                  </button>
+                </div>
+                {/* Tecnologías */}
+                <div className="flex gap-2 pr-2 text-xl">
+                  {proyecto.technology.split(" ").map((tech, idx) => (
+                    <span key={idx} title={tech}>
+                      {techIcons[tech.toLowerCase()] || tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
