@@ -21,7 +21,7 @@ import {
 import { FaJava } from "react-icons/fa";
 
 // Iconos por tecnología
-const techIcons: { [key: string]: JSX.Element } = {
+const techIcons: { [key: string]: React.ReactNode } = {
   html: <SiHtml5 title="HTML" />,
   css: <SiCss3 title="CSS" />,
   js: <SiJavascript title="JavaScript" />,
