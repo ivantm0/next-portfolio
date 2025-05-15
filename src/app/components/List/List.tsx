@@ -61,8 +61,7 @@ const listItemVariants = {
 };
 
 const List = () => {
-  const { language } = useLanguage();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const { isOpen: menu } = useMenu();
   const isMobile = useIsMobile();
 
