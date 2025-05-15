@@ -80,7 +80,7 @@ const SideMenu = ({ menu, setIsOpen, setActiveSection }: Props) => {
               </motion.button>
             ))}
 
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="pt-4 pl-2">
               <Socials />
             </motion.div>
           </motion.ul>

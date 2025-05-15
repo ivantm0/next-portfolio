@@ -47,7 +47,7 @@ const Contact = () => {
           animate="visible"
           exit="exit"
           variants={containerVariants}
-          className="w-full flex justify-center items-center px-10 py-8"
+          className="w-full flex justify-center items-center px-10 pt-4 xl:mt-20"
         >
           <motion.div
             className="text-white w-full max-w-6xl"

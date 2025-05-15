@@ -52,7 +52,7 @@ const Header = ({
   // }, []);
 
   return (
-    <div className="flex w-full justify-between items-center px-5 py-10 sm:px-20 sm:py-30">
+    <div className="flex w-full justify-between items-center px-5 py-10 sm:px-20 sm:py-14">
       <div className="flex gap-10">
         <button
           onClick={() => handleClick("home")}

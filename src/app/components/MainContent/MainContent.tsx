@@ -75,7 +75,7 @@ const MainContent = ({ setActiveSection }: Props) => {
       {!menu && (
         <motion.section
           key="main-content"
-          className="flex justify-center items-center flex-col px-4 py-8 text-white text-center"
+          className="flex justify-center items-center flex-col px-4 pt-20 text-white text-center"
           style={{ fontFamily: "var(--font-geist-mono)" }}
           variants={containerVariants}
           initial="hidden"
@@ -105,7 +105,14 @@ const MainContent = ({ setActiveSection }: Props) => {
                 onClick={() => handleClick("projects")}
                 className="flex group flex-col items-center cursor-pointer overflow-hidden gap-2"
                 aria-label="Ir a proyectos"
-                variants={itemVariants}
+                animate={{
+                  y: [0, 5, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <span className="flex items-center gap-2">
                   <FaArrowRightLong />
@@ -118,7 +125,14 @@ const MainContent = ({ setActiveSection }: Props) => {
                 onClick={() => handleClick("about")}
                 className="flex group flex-col items-center cursor-pointer overflow-hidden gap-2"
                 aria-label="Ir a sobre mí"
-                variants={itemVariants}
+                animate={{
+                  y: [0, 5, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <span className="flex items-center gap-2">
                   <FaArrowRightLong />
