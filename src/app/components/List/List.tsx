@@ -19,6 +19,7 @@ import {
   SiNodedotjs,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import { BsBootstrap } from "react-icons/bs";
 
 // Iconos por tecnología
 const techIcons: { [key: string]: React.ReactNode } = {
@@ -31,6 +32,7 @@ const techIcons: { [key: string]: React.ReactNode } = {
   tailwind: <SiTailwindcss title="Tailwind CSS" />,
   java: <FaJava title="Java" />,
   node: <SiNodedotjs title="Node.js" />,
+  bootstrap: <BsBootstrap title="Bootstrap" />,
 };
 
 // Hook móvil

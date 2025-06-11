@@ -1,19 +1,19 @@
 export const ListData = [
-    // {
-    //   index: 0,
-    //   name: {
-    //     es: "Acciona Atlas",
-    //     en: "Acciona Atlas",
-    //   },
-    //   description: {
-    //     es: "Web hecha en Innusual para Acciona.",
-    //     en: "Website made in Innusual for Acciona.",
-    //   },
-    //   imageUrl: "/projects-cover/0-acciona-atlas.png",
-    //   githubUrl: null,
-    //   webUrl: "https://acciona-web-sostenibilidad.vercel.app",
-    //   technology: "nextjs tailwind ts"
-    // },
+    {
+      index: 0,
+      name: {
+        es: "Chatbot Gemini",
+        en: "Chatbot Gemini",
+      },
+      description: {
+        es: "Chatbot de IA que utiliza la API Gemini de Google.",
+        en: "AI chatbot using Google’s Gemini API.",
+      },
+      imageUrl: "/projects-cover/15-chatbot.png",
+      githubUrl: null,
+      webUrl: "https://chat-bot-gemini.netlify.app/",
+      technology: "react bootstrap ts"
+    },
     {
       index: 1,
       name: {
@@ -21,8 +21,8 @@ export const ListData = [
         en: "Bank web",
       },
       description: {
-        es: "Web hecha en Innusual para Acciona.",
-        en: "Website made in Innusual for Acciona.",
+        es: "Landing page banco y animaciones con framer motion.",
+        en: "Landing page bank and animations with framer motion.",
       },
       imageUrl: "/projects-cover/13-web-bank.png",
       githubUrl: "https://github.com/ivantm0/landing-bank-nextjs",
@@ -77,6 +77,21 @@ export const ListData = [
     {
       index: 5,
       name: {
+        es: "Control de gastos",
+        en: "Expense tracker",
+      },
+      description: {
+        es: "Aplicación de seguimiento de gastos completamente funcional.",
+        en: "fully functional Expense Tracker App.",
+      },
+      imageUrl: "/projects-cover/14-track-flow.png",
+      githubUrl: "https://github.com/ivantm0/expense-tracker",
+      webUrl: "https://expense-tracker-flow.netlify.app/",
+      technology: "react bootstrap ts"
+    },
+    {
+      index: 6,
+      name: {
         es: "Pokédex",
         en: "Pokedex",
       },
@@ -90,7 +105,7 @@ export const ListData = [
       technology: "react css ts"
     },
     {
-      index: 6,
+      index: 7,
       name: {
         es: "Launcher Universae",
         en: "Launcher Universae",
@@ -105,7 +120,7 @@ export const ListData = [
       technology: "java"
     },
     {
-      index: 7,
+      index: 8,
       name: {
         es: "Sunnyside web",
         en: "Sunnyside web",
@@ -120,7 +135,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 8,
+      index: 9,
       name: {
         es: "W. web",
         en: "W. web",
@@ -135,7 +150,7 @@ export const ListData = [
       technology: "react tailwind ts"
     },
     {
-      index: 9,
+      index: 10,
       name: {
         es: "Piedra, papel, tijera",
         en: "Rock, paper, scissors",
@@ -150,7 +165,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 10,
+      index: 11,
       name: {
         es: "Consultar tiempo",
         en: "Check time",
@@ -165,7 +180,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 11,
+      index: 12,
       name: {
         es: "Ahorcado",
         en: "Hangman",
@@ -180,7 +195,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 12,
+      index: 13,
       name: {
         es: "IP Tracker",
         en: "IP Tracker",
@@ -195,7 +210,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 13,
+      index: 14,
       name: {
         es: "EasyBank web",
         en: "EasyBank web",
