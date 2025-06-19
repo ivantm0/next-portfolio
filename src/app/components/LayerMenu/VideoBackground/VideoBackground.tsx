@@ -20,16 +20,7 @@ const VideoBackground = () => {
   // }, []);
   return (
     <>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 h-screen w-screen overflow-hidden object-cover -z-50"
-      >
-        <source src="/noise2.mp4" type="video/mp4" />
-        Tu navegador no soporta la reproducción de video.
-      </video>
+      <div className="absolute bg-black top-0 left-0 h-screen w-screen overflow-hidden object-cover -z-50"></div>
 
       {/* Futuro tema claro ${isDarkMode ? "bg-gray-900 opacity-80" : "bg-gray-500 opacity-80" */}
       <div
