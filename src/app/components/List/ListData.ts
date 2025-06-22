@@ -32,6 +32,21 @@ export const ListData = [
     {
       index: 2,
       name: {
+        es: "Notas",
+        en: "Notes",
+      },
+      description: {
+        es: "Aplicación para crear notas y colocarlas en cualquier lado de la pantalla.",
+        en: "Application to create notes and place them anywhere on the screen.",
+      },
+      imageUrl: "/projects-cover/16-notas.png",
+      githubUrl: "https://github.com/ivantm0/notas",
+      webUrl: "https://agenda-notas.netlify.app/",
+      technology: "react css ts"
+    },
+    {
+      index: 3,
+      name: {
         es: "Buscador de países",
         en: "Country Finder",
       },
@@ -45,7 +60,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 3,
+      index: 4,
       name: {
         es: "Página web espacio",
         en: "Space web page",
@@ -60,7 +75,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 4,
+      index: 5,
       name: {
         es: "Theoric builder",
         en: "Theoric builder",
@@ -75,7 +90,7 @@ export const ListData = [
       technology: "java"
     },
     {
-      index: 5,
+      index: 6,
       name: {
         es: "Control de gastos",
         en: "Expense tracker",
@@ -90,7 +105,7 @@ export const ListData = [
       technology: "react bootstrap ts"
     },
     {
-      index: 6,
+      index: 7,
       name: {
         es: "Pokédex",
         en: "Pokedex",
@@ -105,7 +120,7 @@ export const ListData = [
       technology: "react css ts"
     },
     {
-      index: 7,
+      index: 8,
       name: {
         es: "Launcher Universae",
         en: "Launcher Universae",
@@ -120,7 +135,7 @@ export const ListData = [
       technology: "java"
     },
     {
-      index: 8,
+      index: 9,
       name: {
         es: "Sunnyside web",
         en: "Sunnyside web",
@@ -135,7 +150,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 9,
+      index: 10,
       name: {
         es: "W. web",
         en: "W. web",
@@ -150,7 +165,7 @@ export const ListData = [
       technology: "react tailwind ts"
     },
     {
-      index: 10,
+      index: 11,
       name: {
         es: "Piedra, papel, tijera",
         en: "Rock, paper, scissors",
@@ -165,7 +180,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 11,
+      index: 12,
       name: {
         es: "Consultar tiempo",
         en: "Check time",
@@ -180,7 +195,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 12,
+      index: 13,
       name: {
         es: "Ahorcado",
         en: "Hangman",
@@ -195,7 +210,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 13,
+      index: 14,
       name: {
         es: "IP Tracker",
         en: "IP Tracker",
@@ -210,7 +225,7 @@ export const ListData = [
       technology: "html css js"
     },
     {
-      index: 14,
+      index: 15,
       name: {
         es: "EasyBank web",
         en: "EasyBank web",
