@@ -48,7 +48,7 @@ const ProjectDetail = ({ index }: { index: number }) => {
           {project.role[language]}
         </div>
 
-        <h1 className="overflow-hidden font-display text-[14vw] font-bold uppercase leading-[0.85] tracking-[-0.05em] md:text-[10vw]">
+        <h1 className="overflow-hidden font-display text-[11vw] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-balance md:text-[6.5vw]">
           <motion.span
             className="block"
             initial={{ y: "100%" }}
@@ -125,7 +125,7 @@ const ProjectDetail = ({ index }: { index: number }) => {
           <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted">
             {t.project.next} →
           </p>
-          <p className="font-display text-[12vw] font-bold uppercase leading-[0.85] tracking-[-0.05em] text-outline transition-colors duration-500 group-hover:text-accent group-hover:[-webkit-text-stroke:0px] md:text-[8vw]">
+          <p className="font-display text-[9vw] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-balance text-outline transition-colors duration-500 group-hover:text-accent group-hover:[-webkit-text-stroke:0px] md:text-[5.5vw]">
             {next.name[language]}
           </p>
         </Link>
