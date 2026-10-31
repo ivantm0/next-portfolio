@@ -15,16 +15,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const description =
+  "Portfolio de Iván Terol, desarrollador frontend: Angular, Svelte, React y design systems con Stencil.js. Interfaces rápidas, accesibles y cuidadas al detalle.";
+
 export const metadata: Metadata = {
+  // Base para que las URLs de Open Graph (imágenes al compartir) sean absolutas
+  metadataBase: new URL("https://ivanterol.com"),
   title: "Iván Terol — Desarrollador frontend",
-  description:
-    "Portfolio de Iván Terol, desarrollador frontend. Interfaces web rápidas, accesibles y cuidadas al detalle.",
+  description,
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Iván Terol — Desarrollador frontend",
-    description:
-      "Interfaces web rápidas, accesibles y cuidadas al detalle.",
+    description,
+    url: "/",
+    siteName: "Iván Terol",
     type: "website",
     locale: "es_ES",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Iván Terol — Desarrollador frontend",
+    description,
   },
 };
 
