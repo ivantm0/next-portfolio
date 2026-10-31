@@ -12,10 +12,9 @@
     "@netlify/blobs": "^8.1.0",
     "framer-motion": "^12.9.1",
     "lenis": "^1.3.4",
-    "next": "15.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "next": "^15.3.9",
+    "react": "^19.1.10",
+    "react-dom": "^19.1.10"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -25,7 +24,7 @@
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "eslint": "^9",
-    "eslint-config-next": "15.3.0",
+    "eslint-config-next": "^15.3.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
