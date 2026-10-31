@@ -89,17 +89,17 @@ export const projects: Project[] = [
   },
   {
     slug: "buscador-de-paises",
-    name: { es: "Buscador de países", en: "Country finder" },
+    name: { es: "Banderas", en: "Banderas" },
     description: {
-      es: "Web para buscar países por nombre, en inglés y en español.",
-      en: "Website to search for countries by name, in English and Spanish.",
+      es: "Atlas de 250 países en SvelteKit y Svelte 5 (runes): búsqueda instantánea con filtros en la URL, ficha por país con mapa y fronteras, y un minijuego para adivinar banderas. Todo pre-renderizado y cubierto con tests en Playwright.",
+      en: "Atlas of 250 countries built with SvelteKit and Svelte 5 (runes): instant search with URL filters, a page per country with map and borders, and a flag-guessing game. Fully prerendered and covered by Playwright tests.",
     },
     role: { es: "Proyecto personal", en: "Personal project" },
     year: "2025",
-    imageUrl: "/projects-cover/1-buscador-paises.png",
-    githubUrl: "https://github.com/ivantm0/buscar-paises.git",
+    imageUrl: "/projects-cover/1-banderas.png",
+    githubUrl: "https://github.com/ivantm0/buscar-paises",
     webUrl: "https://buscador-de-paises-js.netlify.app/",
-    technology: ["HTML", "CSS", "JavaScript"],
+    technology: ["SvelteKit", "TypeScript", "Playwright"],
   },
 ];
 
