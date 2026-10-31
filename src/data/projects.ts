@@ -32,6 +32,20 @@ export const projects: Project[] = [
     technology: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
+    slug: "barberia-reservas",
+    name: { es: "Web de barbería con reservas", en: "Barbershop Booking Site" },
+    description: {
+      es: "Filo, la web de una barbería ficticia en SvelteKit y Svelte 5: reserva en 4 pasos con disponibilidad calculada según la duración del servicio y las citas ocupadas, exportación al calendario (.ics), gestión de citas y panel del negocio con la agenda del día. Cubierta con tests en Playwright.",
+      en: "Filo, a fictional barbershop site built with SvelteKit and Svelte 5: 4-step booking with availability computed from service length and existing appointments, calendar export (.ics), appointment management and a business dashboard with the daily schedule. Covered by Playwright tests.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2026",
+    imageUrl: "/projects-cover/17-filo.png",
+    githubUrl: "https://github.com/ivantm0/filo-barber-club",
+    webUrl: "https://filo-barber-club.netlify.app/",
+    technology: ["SvelteKit", "TypeScript", "Playwright"],
+  },
+  {
     slug: "web-banco",
     name: { es: "Landing de banca digital", en: "Digital Banking Landing" },
     description: {
