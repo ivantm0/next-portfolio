@@ -32,6 +32,20 @@ export const projects: Project[] = [
     technology: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
+    slug: "control-de-gastos",
+    name: { es: "Gestor de gastos personales", en: "Personal Expense Tracker" },
+    description: {
+      es: "TrackFlow, un gestor de gastos en Angular zoneless con signals: resumen mensual, gráficas en SVG propio, presupuestos por categoría, filtros y exportación a CSV. Cubierto con tests end-to-end en Playwright.",
+      en: "TrackFlow, an expense tracker built with zoneless Angular and signals: monthly overview, hand-made SVG charts, category budgets, filters and CSV export. Covered by Playwright end-to-end tests.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2025",
+    imageUrl: "/projects-cover/14-trackflow.png",
+    githubUrl: "https://github.com/ivantm0/expense-tracker",
+    webUrl: "https://expense-tracker-flow.netlify.app/",
+    technology: ["Angular", "TypeScript", "Playwright"],
+  },
+  {
     slug: "barberia-reservas",
     name: { es: "Web de barbería con reservas", en: "Barbershop Booking Site" },
     description: {
@@ -43,20 +57,6 @@ export const projects: Project[] = [
     imageUrl: "/projects-cover/17-filo.png",
     githubUrl: "https://github.com/ivantm0/filo-barber-club",
     webUrl: "https://filo-barber-club.netlify.app/",
-    technology: ["SvelteKit", "TypeScript", "Playwright"],
-  },
-  {
-    slug: "quiz",
-    name: { es: "Juego de preguntas", en: "Quiz Game" },
-    description: {
-      es: "QuéSabes, un juego de preguntas en SvelteKit y Svelte 5 con modo dev (con fragmentos de código) y modo cultura general: 144 preguntas propias con explicación, puntos por rapidez y rachas, comodines, reto diario con semilla por fecha, estadísticas y control total por teclado. Cubierto con tests en Playwright.",
-      en: "QuéSabes, a quiz game built with SvelteKit and Svelte 5 with a dev mode (including code snippets) and a general knowledge mode: 144 original questions with explanations, speed and streak scoring, lifelines, a date-seeded daily challenge, stats and full keyboard control. Covered by Playwright tests.",
-    },
-    role: { es: "Proyecto personal", en: "Personal project" },
-    year: "2026",
-    imageUrl: "/projects-cover/18-quesabes.png",
-    githubUrl: "https://github.com/ivantm0/quizgame",
-    webUrl: null,
     technology: ["SvelteKit", "TypeScript", "Playwright"],
   },
   {
@@ -72,6 +72,20 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ivantm0/landing-bank-nextjs",
     webUrl: "https://nextjs-bank.netlify.app/",
     technology: ["Next.js", "Tailwind", "TypeScript"],
+  },
+  {
+    slug: "quiz",
+    name: { es: "Juego de preguntas", en: "Quiz Game" },
+    description: {
+      es: "QuéSabes, un juego de preguntas en SvelteKit y Svelte 5 con modo dev (con fragmentos de código) y modo cultura general: 144 preguntas propias con explicación, puntos por rapidez y rachas, comodines, reto diario con semilla por fecha, estadísticas y control total por teclado. Cubierto con tests en Playwright.",
+      en: "QuéSabes, a quiz game built with SvelteKit and Svelte 5 with a dev mode (including code snippets) and a general knowledge mode: 144 original questions with explanations, speed and streak scoring, lifelines, a date-seeded daily challenge, stats and full keyboard control. Covered by Playwright tests.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2026",
+    imageUrl: "/projects-cover/18-quesabes.png",
+    githubUrl: "https://github.com/ivantm0/quizgame",
+    webUrl: "https://quizcardgame.netlify.app/",
+    technology: ["SvelteKit", "TypeScript", "Playwright"],
   },
   {
     slug: "chatbot-gemini",
@@ -100,20 +114,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ivantm0/notas",
     webUrl: "https://agenda-notas.netlify.app/",
     technology: ["React", "TypeScript", "Playwright"],
-  },
-  {
-    slug: "control-de-gastos",
-    name: { es: "Gestor de gastos personales", en: "Personal Expense Tracker" },
-    description: {
-      es: "TrackFlow, un gestor de gastos en Angular zoneless con signals: resumen mensual, gráficas en SVG propio, presupuestos por categoría, filtros y exportación a CSV. Cubierto con tests end-to-end en Playwright.",
-      en: "TrackFlow, an expense tracker built with zoneless Angular and signals: monthly overview, hand-made SVG charts, category budgets, filters and CSV export. Covered by Playwright end-to-end tests.",
-    },
-    role: { es: "Proyecto personal", en: "Personal project" },
-    year: "2025",
-    imageUrl: "/projects-cover/14-trackflow.png",
-    githubUrl: "https://github.com/ivantm0/expense-tracker",
-    webUrl: "https://expense-tracker-flow.netlify.app/",
-    technology: ["Angular", "TypeScript", "Playwright"],
   },
   {
     slug: "buscador-de-paises",
