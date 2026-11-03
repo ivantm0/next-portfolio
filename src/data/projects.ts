@@ -32,6 +32,20 @@ export const projects: Project[] = [
     technology: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
+    slug: "design-system",
+    name: { es: "Design system de web components", en: "Web Components Design System" },
+    description: {
+      es: "Trazo, un design system con Stencil.js documentado en Storybook: 15 web components que funcionan en Angular, React, Svelte o HTML, design tokens con tema claro y oscuro, campos que se integran en formularios nativos (ElementInternals) y patrones accesibles de WAI-ARIA. Cubierto con tests unitarios y con Playwright, incluida la revisión de accesibilidad con axe.",
+      en: "Trazo, a Stencil.js design system documented in Storybook: 15 web components that work in Angular, React, Svelte or plain HTML, design tokens with light and dark themes, fields that join native forms (ElementInternals) and accessible WAI-ARIA patterns. Covered by unit and Playwright tests, including axe accessibility checks.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2026",
+    imageUrl: "/projects-cover/19-trazo.png",
+    githubUrl: "https://github.com/ivantm0/trazo-design-system",
+    webUrl: "https://trazo-design-system.netlify.app/",
+    technology: ["Stencil.js", "Storybook", "Playwright"],
+  },
+  {
     slug: "control-de-gastos",
     name: { es: "Gestor de gastos personales", en: "Personal Expense Tracker" },
     description: {
