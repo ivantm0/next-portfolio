@@ -19,8 +19,10 @@ const description =
   "Portfolio de Iván Terol, desarrollador frontend: Angular, Svelte, React y design systems con Stencil.js. Interfaces rápidas, accesibles y cuidadas al detalle.";
 
 export const metadata: Metadata = {
-  // Base para que las URLs de Open Graph (imágenes al compartir) sean absolutas
-  metadataBase: new URL("https://ivanterol.com"),
+  // Base para que las URLs de Open Graph (imágenes al compartir) sean absolutas.
+  // Usa el dominio que sirve la web: ivanterol.com solo redirige aquí y los
+  // scrapers (LinkedIn) no resuelven og:url/og:image apuntando a una redirección.
+  metadataBase: new URL("https://ivanterol.netlify.app"),
   title: "Iván Terol — Desarrollador frontend",
   description,
   alternates: { canonical: "/" },
