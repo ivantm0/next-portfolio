@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
-import SmoothScroll from "./components/SmoothScroll";
 import Motion from "./components/Motion";
 import { themeScript } from "./components/ThemeToggle";
 import "./globals.css";
@@ -59,7 +58,7 @@ export default function RootLayout({
       <body className={`${archivo.variable} ${plexMono.variable} antialiased`}>
         <LanguageProvider>
           <Motion>
-            <SmoothScroll>{children}</SmoothScroll>
+            {children}
           </Motion>
         </LanguageProvider>
       </body>

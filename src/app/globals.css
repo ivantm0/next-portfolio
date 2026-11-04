@@ -72,6 +72,7 @@ html {
   background: var(--paper);
   color: var(--ink);
   scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -99,18 +100,26 @@ body {
   font-variation-settings: "wdth" 125;
 }
 
-/* Con movimiento reducido las capturas se ven enteras desde el principio */
-@media (prefers-reduced-motion: reduce) {
-  .reveal-clip {
-    clip-path: none !important;
+/* Franja de textos en movimiento */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
   }
 }
 
-/* Lenis */
-html.lenis,
-html.lenis body {
-  height: auto;
+.animate-marquee {
+  animation: marquee 35s linear infinite;
 }
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

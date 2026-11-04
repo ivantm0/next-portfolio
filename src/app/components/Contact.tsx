@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useLenis } from "lenis/react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Reveal, SectionLabel } from "./Reveal";
 import ViewCounter from "./ViewCounter";
@@ -15,7 +14,6 @@ const socials = [
 
 const Contact = () => {
   const { t } = useLanguage();
-  const lenis = useLenis();
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -74,7 +72,7 @@ const Contact = () => {
         <span>© {new Date().getFullYear()} — {t.footer.built}</span>
         <ViewCounter label={t.footer.views} />
         <button
-          onClick={() => lenis?.scrollTo(0, { duration: 1.2 })}
+          onClick={() => window.scrollTo({ top: 0 })}
           className="text-left uppercase transition-colors hover:text-accent"
         >
           ↑ {t.footer.top}

@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useLenis } from "lenis/react";
 import { useLanguage } from "@/context/LanguageContext";
 import { easeOut } from "./Reveal";
 
@@ -120,14 +119,6 @@ const Selection = ({ children, hint }: { children: React.ReactNode; hint: string
 
 const Hero = () => {
   const { t } = useLanguage();
-  const lenis = useLenis();
-
-  const toWork = (e: React.MouseEvent) => {
-    if (!lenis) return;
-    e.preventDefault();
-    lenis.scrollTo("#work", { offset: -72, duration: 1.2 });
-  };
-
   return (
     <section id="top" className="relative mx-auto max-w-[1440px] px-5 pb-16 pt-24 md:px-10 md:pb-20 md:pt-28">
       <Guides />
@@ -169,7 +160,6 @@ const Hero = () => {
             <div className="flex flex-wrap gap-3">
               <a
                 href="#work"
-                onClick={toWork}
                 className="inline-flex h-11 items-center bg-ink px-5 font-mono text-xs uppercase tracking-[0.1em] text-paper transition-colors hover:bg-accent hover:text-accent-ink"
               >
                 {t.hero.cta} ↓

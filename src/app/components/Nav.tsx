@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useLenis } from "lenis/react";
 import { useLanguage } from "@/context/LanguageContext";
 import ThemeToggle from "./ThemeToggle";
 
@@ -58,7 +57,6 @@ const ScrollRuler = () => {
 
 const Nav = () => {
   const { t } = useLanguage();
-  const lenis = useLenis();
   const time = useMadridTime();
 
   const links = [
@@ -67,16 +65,10 @@ const Nav = () => {
     { href: "#contact", label: t.nav.contact },
   ];
 
-  const scrollTo = (e: React.MouseEvent, href: string) => {
-    if (!lenis) return;
-    e.preventDefault();
-    lenis.scrollTo(href, { offset: href === "#top" ? 0 : -72, duration: 1.2 });
-  };
-
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-5 font-mono text-xs uppercase tracking-[0.08em] md:px-10">
-        <a href="#top" onClick={(e) => scrollTo(e, "#top")} className="font-medium text-ink">
+        <a href="#top" className="font-medium text-ink">
           Iván Terol
         </a>
 
@@ -89,7 +81,6 @@ const Nav = () => {
             <a
               key={l.href}
               href={l.href}
-              onClick={(e) => scrollTo(e, l.href)}
               className="hidden text-ink-soft transition-colors hover:text-accent sm:block"
             >
               {l.label}
