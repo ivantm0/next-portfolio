@@ -11,11 +11,14 @@ const translations = {
         "Construyo interfaces web rápidas, accesibles y cuidadas al detalle, y los design systems que las sostienen.",
       available: "Abierto a nuevas oportunidades",
       scroll: "Desliza",
+      cta: "Ver proyectos",
+      drag: "arrastra para redimensionar",
     },
     work: {
       label: "Trabajo seleccionado",
       intro: "Proyectos personales y de formación en los que he trabajado.",
       view: "Ver",
+      count: "proyectos",
     },
     project: {
       back: "Volver al trabajo",
@@ -61,11 +64,14 @@ const translations = {
         "I build fast, accessible and carefully crafted web interfaces, and the design systems behind them.",
       available: "Open to new opportunities",
       scroll: "Scroll",
+      cta: "See projects",
+      drag: "drag to resize",
     },
     work: {
       label: "Selected work",
       intro: "Personal and training projects I've worked on.",
       view: "View",
+      count: "projects",
     },
     project: {
       back: "Back to work",

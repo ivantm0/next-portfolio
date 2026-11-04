@@ -59,7 +59,7 @@ const ViewCounter = ({ label }: { label: string }) => {
     <span className="flex items-center gap-2">
       <span className="h-1.5 w-1.5 rounded-full bg-accent" />
       {label} ·{" "}
-      <span className="tabular-nums text-bone">
+      <span className="tabular-nums text-ink">
         {String(display).padStart(6, "0")}
       </span>
     </span>

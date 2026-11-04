@@ -16,26 +16,30 @@ export const Reveal = ({
 }) => (
   <motion.div
     className={className}
-    initial={{ opacity: 0, y: 40 }}
+    initial={{ opacity: 0, y: 16 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-10% 0px" }}
-    transition={{ duration: 0.9, ease: easeOut, delay }}
+    viewport={{ once: true, margin: "-8% 0px" }}
+    transition={{ duration: 0.6, ease: easeOut, delay }}
   >
     {children}
   </motion.div>
 );
 
-// Etiqueta de sección: "(02) — Trabajo seleccionado"
+// Cabecera de sección como anotación de especificación: "01 — Trabajo seleccionado"
 export const SectionLabel = ({
   index,
   children,
+  aside,
 }: {
   index: string;
   children: React.ReactNode;
+  aside?: React.ReactNode;
 }) => (
-  <Reveal className="mb-10 flex items-center gap-4 font-mono text-xs uppercase tracking-widest text-muted md:mb-16">
-    <span className="text-accent">({index})</span>
-    <span className="h-px w-10 bg-line" />
-    {children}
-  </Reveal>
+  <div className="mb-10 flex items-baseline justify-between gap-6 border-t border-line-strong pt-3 font-mono text-xs uppercase tracking-[0.12em] text-muted md:mb-14">
+    <span className="flex items-baseline gap-3">
+      <span className="text-accent">{index}</span>
+      <span>{children}</span>
+    </span>
+    {aside && <span className="hidden sm:block">{aside}</span>}
+  </div>
 );

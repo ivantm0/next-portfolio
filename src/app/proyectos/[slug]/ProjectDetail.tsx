@@ -6,10 +6,11 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { projects } from "@/data/projects";
 import { Reveal, easeOut } from "@/app/components/Reveal";
-import Magnetic from "@/app/components/Magnetic";
+import { LanguageToggle } from "@/app/components/Nav";
+import ThemeToggle from "@/app/components/ThemeToggle";
 
 const ProjectDetail = ({ index }: { index: number }) => {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, t } = useLanguage();
   const project = projects[index];
   const next = projects[(index + 1) % projects.length];
 
@@ -26,64 +27,52 @@ const ProjectDetail = ({ index }: { index: number }) => {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 py-5 font-mono text-xs uppercase tracking-wider mix-blend-difference md:px-8">
-        <Link href="/#work" className="transition-colors hover:text-accent">
-          ← {t.project.back}
-        </Link>
-        <button
-          onClick={() => setLanguage(language === "es" ? "en" : "es")}
-          aria-label={language === "es" ? "Switch to English" : "Cambiar a español"}
-          className="uppercase"
-        >
-          <span className={language === "es" ? "text-accent" : "text-muted"}>ES</span>
-          {" / "}
-          <span className={language === "en" ? "text-accent" : "text-muted"}>EN</span>
-        </button>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md">
+        <div className="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-5 font-mono text-xs uppercase tracking-[0.08em] md:px-10">
+          <Link href="/#work" className="text-ink-soft transition-colors hover:text-accent">
+            ← {t.project.back}
+          </Link>
+          <div className="flex items-center gap-5 md:gap-8">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
+        </div>
       </header>
 
-      <main className="px-4 pb-8 pt-32 md:px-8 md:pt-40">
-        <div className="mb-10 flex items-center gap-4 font-mono text-xs uppercase tracking-widest text-muted">
-          <span className="text-accent">({String(index + 1).padStart(2, "0")})</span>
-          <span className="h-px w-10 bg-line" />
-          {project.role[language]}
+      <main className="mx-auto max-w-[1440px] px-5 pb-10 pt-28 md:px-10 md:pt-36">
+        <div className="mb-8 flex items-baseline gap-3 font-mono text-xs uppercase tracking-[0.12em] text-muted">
+          <span className="text-accent">{String(index + 1).padStart(2, "0")}</span>
+          <span>/ {String(projects.length).padStart(2, "0")}</span>
         </div>
 
-        <h1 className="overflow-hidden font-display text-[11vw] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-balance md:text-[6.5vw]">
-          <motion.span
-            className="block"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1, ease: easeOut }}
-          >
-            {project.name[language]}
-          </motion.span>
-        </h1>
-
-        <Reveal
-          delay={0.2}
-          className="mt-16 grid gap-8 border-t border-line pt-8 md:grid-cols-12"
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: easeOut }}
+          className="display-wide max-w-[16ch] text-balance text-[clamp(2.5rem,7vw,6.5rem)] font-extrabold leading-[0.95] tracking-[-0.04em]"
         >
+          {project.name[language]}
+        </motion.h1>
+
+        {/* Ficha técnica */}
+        <Reveal delay={0.15} className="mt-14 grid gap-6 border-y border-line py-6 sm:grid-cols-2 md:grid-cols-12">
           {meta.map((m) => (
             <div key={m.label} className="md:col-span-3">
-              <p className="mb-2 font-mono text-xs uppercase tracking-widest text-muted">
-                {m.label}
-              </p>
-              <p className="text-lg">{m.value}</p>
+              <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">{m.label}</p>
+              <p className="text-lg leading-snug">{m.value}</p>
             </div>
           ))}
           <div className="md:col-span-3">
-            <p className="mb-2 font-mono text-xs uppercase tracking-widest text-muted">
-              {t.project.links}
-            </p>
+            <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">{t.project.links}</p>
             {links.length ? (
-              <div className="flex flex-wrap gap-4 text-lg">
+              <div className="flex flex-wrap gap-x-5 gap-y-1 text-lg">
                 {links.map((l) => (
                   <a
                     key={l.href}
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline decoration-line underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                    className="underline decoration-line-strong decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
                   >
                     {l.label} ↗
                   </a>
@@ -96,50 +85,38 @@ const ProjectDetail = ({ index }: { index: number }) => {
         </Reveal>
 
         <motion.div
-          initial={{ opacity: 0, y: 60, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.1, ease: easeOut, delay: 0.3 }}
-          className="relative mt-16 aspect-video overflow-hidden rounded-lg"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: easeOut, delay: 0.25 }}
+          className="relative mt-10 aspect-[16/10] overflow-hidden border border-line bg-raised"
         >
           <Image
             src={project.imageUrl}
             alt={project.name[language]}
             fill
             priority
-            sizes="100vw"
-            className="object-cover"
+            sizes="(min-width: 1440px) 1360px, 100vw"
+            className="object-cover object-top"
           />
         </motion.div>
 
-        <Reveal className="mt-24 grid md:grid-cols-12">
-          <p className="font-display text-2xl leading-snug md:col-span-8 md:col-start-5 md:text-4xl">
+        <Reveal className="mt-20 grid md:grid-cols-12 md:gap-6">
+          <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted md:col-span-3">
+            {language === "es" ? "Descripción" : "Overview"}
+          </p>
+          <p className="mt-4 text-pretty text-2xl font-medium leading-[1.3] tracking-[-0.01em] md:col-span-8 md:col-start-5 md:mt-0 md:text-3xl">
             {project.description[language]}
           </p>
         </Reveal>
 
-        <Link
-          href={`/proyectos/${next.slug}`}
-          data-cursor={t.work.view}
-          className="group mt-40 block border-t border-line pt-8"
-        >
-          <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted">
+        <Link href={`/proyectos/${next.slug}`} className="group mt-32 block border-t border-line-strong pt-4">
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.12em] text-muted">
             {t.project.next} →
           </p>
-          <p className="font-display text-[9vw] font-bold uppercase leading-[0.9] tracking-[-0.05em] text-balance text-outline transition-colors duration-500 group-hover:text-accent group-hover:[-webkit-text-stroke:0px] md:text-[5.5vw]">
+          <p className="display-wide max-w-[18ch] text-balance text-[clamp(2rem,5.5vw,5rem)] font-extrabold leading-[0.95] tracking-[-0.04em] transition-colors group-hover:text-accent">
             {next.name[language]}
           </p>
         </Link>
-
-        <div className="mt-24 flex justify-center">
-          <Magnetic>
-            <Link
-              href="/#work"
-              className="inline-flex rounded-full border border-bone px-7 py-4 font-mono text-sm uppercase tracking-widest transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-ink"
-            >
-              ← {t.project.back}
-            </Link>
-          </Magnetic>
-        </div>
       </main>
     </>
   );

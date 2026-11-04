@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Geist_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import SmoothScroll from "./components/SmoothScroll";
-import Cursor from "./components/Cursor";
+import Motion from "./components/Motion";
+import { themeScript } from "./components/ThemeToggle";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+// Archivo variable con eje de anchura: normal para leer, ancha para titulares
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  axes: ["wdth"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const description =
@@ -47,15 +51,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body
-        className={`${spaceGrotesk.variable} ${geistMono.variable} antialiased`}
-      >
+    // data-theme lo pone el script antes de hidratar: se ignora esa diferencia
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className={`${archivo.variable} ${plexMono.variable} antialiased`}>
         <LanguageProvider>
-          <SmoothScroll>{children}</SmoothScroll>
-          <Cursor />
+          <Motion>
+            <SmoothScroll>{children}</SmoothScroll>
+          </Motion>
         </LanguageProvider>
-        <div className="grain" aria-hidden />
       </body>
     </html>
   );
