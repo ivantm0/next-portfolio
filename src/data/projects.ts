@@ -32,6 +32,20 @@ export const projects: Project[] = [
     technology: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
+    slug: "nba-analytics",
+    name: { es: "Estadísticas de jugadores NBA", en: "NBA Player Stats Tracker" },
+    description: {
+      es: "NBA Analytics, una web en Next.js 15 para seguir a tus jugadores favoritos sin entrar partido a partido: navegación por jornadas con estadísticas, comparación con la media de la temporada, próximos partidos y marcador en directo, forma reciente, hitos (doble-doble, máximo de la temporada) y gráfica de tendencia en SVG propio. Los datos se cargan cada día con una función programada de Netlify en PostgreSQL (Supabase y Drizzle), detrás de una capa de proveedor preparada para añadir otros deportes.",
+      en: "NBA Analytics, a Next.js 15 app to follow your favourite players without opening every game: day-by-day navigation with box scores, comparison against the season average, upcoming games and live scores, recent form, milestones (double-double, season high) and a hand-made SVG trend chart. Data is loaded daily by a Netlify scheduled function into PostgreSQL (Supabase and Drizzle), behind a provider layer ready for other sports.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2026",
+    imageUrl: "/projects-cover/20-nba-analytics.png",
+    githubUrl: "https://github.com/ivantm0/nba-analytics",
+    webUrl: "https://nba-analytics.netlify.app/",
+    technology: ["Next.js", "PostgreSQL", "TypeScript"],
+  },
+  {
     slug: "design-system",
     name: { es: "Design system de web components", en: "Web Components Design System" },
     description: {
@@ -44,6 +58,20 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ivantm0/trazo-design-system",
     webUrl: "https://trazo-design-system.netlify.app/",
     technology: ["Stencil.js", "Storybook", "Playwright"],
+  },
+  {
+    slug: "carril-kanban",
+    name: { es: "Tablero kanban de tareas", en: "Kanban Task Board" },
+    description: {
+      es: "Carril, un tablero kanban en Angular 22 construido sobre Trazo, mi design system: componentes standalone, signals y el nuevo control flow en modo zoneless. Arrastrar y soltar entre columnas con Angular CDK y alternativa completa con teclado, búsqueda y filtro por prioridad, borrado con «Deshacer», tema claro y oscuro con los tokens de Trazo y datos guardados en el navegador. Cubierto con tests en Playwright, incluida la revisión de accesibilidad con axe.",
+      en: "Carril, a kanban board in Angular 22 built on Trazo, my design system: standalone components, signals and the new control flow in zoneless mode. Drag and drop between columns with Angular CDK plus a full keyboard alternative, search and priority filter, delete with undo, light and dark themes from Trazo's tokens and data saved in the browser. Covered by Playwright tests, including axe accessibility checks.",
+    },
+    role: { es: "Proyecto personal", en: "Personal project" },
+    year: "2026",
+    imageUrl: "/projects-cover/21-carril.png",
+    githubUrl: "https://github.com/ivantm0/carril",
+    webUrl: "https://carril-kanban.netlify.app/",
+    technology: ["Angular", "TypeScript", "Playwright"],
   },
   {
     slug: "control-de-gastos",

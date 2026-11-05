@@ -9,11 +9,11 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("portada", () => {
-  test("muestra el nombre, las secciones y los 9 proyectos", async ({ page }) => {
+  test("muestra el nombre, las secciones y los 11 proyectos", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1, name: "Iván Terol" })).toBeVisible();
     await expect(page.getByRole("heading", { level: 2, name: "Trabajo" })).toBeVisible();
-    await expect(page.locator("#work li")).toHaveCount(9);
+    await expect(page.locator("#work li")).toHaveCount(11);
     await expect(page.locator("#work li").first()).toContainText("ACCIONA Atlas");
   });
 
@@ -79,7 +79,7 @@ test.describe("proyectos", () => {
     await page.goto("/");
     const preview = page.locator("#work .fixed img.opacity-100");
     await expect(preview).toHaveCount(0);
-    const row = page.locator("#work li").nth(1);
+    const row = page.locator("#work li").nth(2);
     await row.scrollIntoViewIfNeeded();
     await row.hover();
     await expect(preview).toHaveCount(1);
@@ -91,20 +91,20 @@ test.describe("proyectos", () => {
   test("en móvil cada fila muestra su miniatura", async ({ page }) => {
     test.skip(!isMobile(page), "Solo en móvil");
     await page.goto("/");
-    await expect(page.locator("#work li img")).toHaveCount(9);
+    await expect(page.locator("#work li img")).toHaveCount(11);
     await page.locator("#work li").first().scrollIntoViewIfNeeded();
     await expect(page.locator("#work li img").first()).toBeVisible();
   });
 
   test("abre un proyecto, muestra su ficha y enlaza al siguiente", async ({ page }) => {
     await page.goto("/");
-    await page.locator("#work li").nth(1).getByRole("link").click();
+    await page.locator("#work li").nth(2).getByRole("link").click();
     await expect(page).toHaveURL(/\/proyectos\/design-system$/);
     await expect(page.getByRole("heading", { level: 1, name: "Design system de web components" })).toBeVisible();
     await expect(page.getByRole("link", { name: /Código/ })).toHaveAttribute("href", "https://github.com/ivantm0/trazo-design-system");
 
-    await page.getByRole("link", { name: /Gestor de gastos personales/ }).click();
-    await expect(page).toHaveURL(/\/proyectos\/control-de-gastos$/);
+    await page.getByRole("link", { name: /Tablero kanban de tareas/ }).click();
+    await expect(page).toHaveURL(/\/proyectos\/carril-kanban$/);
     await page.getByRole("link", { name: /Volver al trabajo/ }).click();
     await expect(page).toHaveURL(/\/#work$/);
   });
